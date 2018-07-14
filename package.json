@@ -6,6 +6,7 @@
     "clean:dist": "rimraf dist",
     "build:dev": "npm run clean:dist && webpack --mode=development",
     "build:prod": "npm run clean:dist && webpack --mode=production",
+    "build:docs": "npm run clean:docs && DOCS=true webpack --mode=production",
     "serve:dev": "webpack-dev-server --mode=development"
   },
   "devDependencies": {

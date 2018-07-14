@@ -5,14 +5,15 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
+  const isDocs = process.env.DOCS;
 
   return ({
     entry: {
       bundle: './src/index.js',
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
+      path: path.resolve(__dirname, isDocs ? 'docs' : 'dist'),
+      publicPath: isDocs ? '' : '/',
       filename: 'assets/js/[name].[hash:8].js',
     },
     module: {
