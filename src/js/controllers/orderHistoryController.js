@@ -1,5 +1,5 @@
 import * as orderHistoryView from '../views/orderHistoryView';
-import { state } from '../state';
+import state from '../state';
 
 export const addOrder = (order) => {
   state.orderHistory.addOrder(order);

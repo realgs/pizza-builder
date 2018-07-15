@@ -2,19 +2,20 @@ import * as ingredientsController from './ingredientsController';
 import * as orderFormController from './orderFormController';
 import * as summaryController from './summaryController';
 import * as orderHistoryController from './orderHistoryController';
-import { elements } from '../base';
-import { state } from '../state';
+import elements from '../common/elements';
+import state from '../state';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Get history from localStorage and save it in model
+  // Get order history from localStorage and save it in model
   orderHistoryController.getHistory();
-  // Render orders history in view
+  // Render order history in view
   orderHistoryController.renderOrders();
 });
 
 elements.orderButton.addEventListener('click', (e) => {
   e.preventDefault();
 
+  // Create new order
   const order = {
     name: state.form.name,
     address: state.form.address,
@@ -25,12 +26,17 @@ elements.orderButton.addEventListener('click', (e) => {
     total: state.summary.total,
   };
 
+  console.log(order.ingredients);
+
+  // Reset order form
   orderFormController.reset();
+  // Reset summary
   summaryController.reset();
+  // Reset size
   state.size = '';
-
-
+  // Add new order to model and view
   orderHistoryController.addOrder(order);
+  // Save order history
   orderHistoryController.setHistory();
 });
 
@@ -39,9 +45,10 @@ elements.orderForm.addEventListener('input', (e) => {
 });
 
 elements.summaryList.addEventListener('click', (e) => {
+  // Get ingredient data from clicked element attributes
   const name = e.target.attributes['v-summary-name'].value;
   const price = e.target.attributes['v-summary-price'].value;
-
+  // Remove clicked item from summary
   summaryController.removeItem(name, price);
 });
 
@@ -60,9 +67,11 @@ elements.ingredientsList.addEventListener('click', (e) => {
 });
 
 elements.sizeList.addEventListener('click', (e) => {
+  // Get size data from clicked element attributes
   const newSize = e.target.id;
   const price = e.target.attributes['v-size-price'].value;
 
+  // Do nothing if new size is same as current size
   if (state.size === newSize) {
     return null;
   }

@@ -1,5 +1,6 @@
 import * as orderFormView from '../views/orderFormView';
-import { state, validateOrder } from '../state';
+import state from '../state';
+import validateOrder from '../common/validateOrder';
 
 export const handleInputChange = (name, value) => {
   // Set inputs values in model

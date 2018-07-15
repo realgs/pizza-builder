@@ -1,4 +1,4 @@
-export const elements = {
+export default {
   orderForm: document.querySelector('.orderForm'),
   orderButton: document.querySelector('.orderButton'),
   ingredientsSearch: document.querySelector('.ingredientsSearch'),

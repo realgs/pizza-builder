@@ -1,5 +1,6 @@
 import * as summaryView from '../views/summaryView';
-import { state, validateOrder } from '../state';
+import state from '../state';
+import validateOrder from '../common/validateOrder';
 
 export const removeItem = (name, price) => {
   // Remove ingredient from summary model

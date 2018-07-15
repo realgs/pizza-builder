@@ -1,4 +1,4 @@
-import { elements } from '../base';
+import elements from '../common/elements';
 
 export const addNewItem = (item, count, price) => {
   const markup = `

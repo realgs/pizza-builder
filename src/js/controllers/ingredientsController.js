@@ -1,5 +1,5 @@
 import * as ingredientsView from '../views/ingredientsView';
-import { state } from '../state';
+import state from '../state';
 
 // Render ingredients list
 ingredientsView.renderIngredients(state.ingredients.items);
