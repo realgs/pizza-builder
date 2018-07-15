@@ -3,6 +3,7 @@
   "description": "Application written in Vanilla JavaScript, using MVC pattern and Bootstrap",
   "author": "appalaszynski",
   "scripts": {
+    "clean:docs": "rimraf docs",
     "clean:dist": "rimraf dist",
     "build:dev": "npm run clean:dist && webpack --mode=development",
     "build:prod": "npm run clean:dist && webpack --mode=production",
