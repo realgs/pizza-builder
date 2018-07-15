@@ -9,6 +9,8 @@
   <br>
 </div>
 
+**Pizza Builder** is MVC application written in pure JavaScript. Development workflow is based on Webpack - it is responsible for generating HTML file, converting ES6+ JavaScript code into plain old ES5, compiling Sass, running development server and generating minified build.
+
 ---
 
 ## Table of Contents
@@ -51,4 +53,4 @@ $ npm run build:prod # Build in production mode (minified files versions, extern
 
 ## Contributing
 
-All contributions and suggestions are welcome! For suggested improvements, please [create an issue](https://github.com/appalaszynski/pizza-builder/issues). For direct contributions, please [fork](https://github.com/appalaszynski/pizza-builder/fork) the repository, create your feature branch, commit your changes, push commits to the branch and create a new [Pull Request](https://github.com/appalaszynski/pizza-builder/pulls).
+All contributions and suggestions are welcome! For suggested improvements, please create an [issue](https://github.com/appalaszynski/pizza-builder/issues). For direct contributions, please [fork](https://github.com/appalaszynski/pizza-builder/fork) the repository, create your feature branch, commit your changes, push commits to the branch and create a new [pull request](https://github.com/appalaszynski/pizza-builder/pulls).
