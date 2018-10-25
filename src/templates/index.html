@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no, user-scalable=no">
-
+  <style>
+    html {
+      visibility: hidden;
+    }
+  </style>
   <title>
     <%= htmlWebpackPlugin.options.title || 'Application name'%>
   </title>
@@ -66,7 +70,7 @@
                 </div>
               <button
                 class="list-group-item list-group-item-action cursor-pointer d-flex justify-content-between align-items-center"
-                v-size-price=15 
+                v-size-price=15
                 id="big"
               >
                Big
